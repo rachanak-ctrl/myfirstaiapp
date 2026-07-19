@@ -38,7 +38,7 @@ if st.button("Generate"):
         with st.spinner("Writing your tweets..."):
             # Invoke the chain
             response = tweet_chain.invoke({"number": number, "topic": topic})
-            raw_content = response.content
+           raw_content = str(response.content)
             
             st.success("Done!")
             
